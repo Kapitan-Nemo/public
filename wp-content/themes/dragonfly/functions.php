@@ -23,7 +23,7 @@ add_action( 'after_setup_theme', 'dragonfly_support' );
 // Enqueue scripts
 function dragonfly_scripts()
 {
-    // Deregister standard wP jQuerry and register new one
+    // Deregister standard wP jQuery and register new one
     wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', get_template_directory_uri() . '/src/js/jquery-3.5.1.min.js', 'jquery', '', true);
     wp_enqueue_script('dragonfly-js',get_template_directory_uri() . '/dist/js/dragonfly.js', 'jquery', '', true);
@@ -67,15 +67,15 @@ function portfolio_post_type() {
 			'name'                => 'Portfolio',
 			'singular_name'       => 'Portfolio',
 			'menu_name'           => 'Portfolio',
-			'all_items'           => 'Wszystkie',
-			'view_item'           => 'Zobacz Portfolio',
-			'add_new_item'        => 'Dodaj nowe Portfolio',
-			'add_new'             => 'Dodaj nowe',
-			'edit_item'           => 'Edytuj Portfolio',
-			'update_item'         => 'Aktualizuj',
-			'search_items'        => 'Szukaj Portfolio',
-			'not_found'           => 'Nie znaleziono',
-			'not_found_in_trash'  => 'Nie znaleziono w koszu'
+			'all_items'           => 'All',
+			'view_item'           => 'All Portfolio',
+			'add_new_item'        => 'Add new Portfolio',
+			'add_new'             => 'Add new',
+			'edit_item'           => 'Edit Portfolio',
+			'update_item'         => 'Update',
+			'search_items'        => 'Search Portfolio',
+			'not_found'           => 'Not found',
+			'not_found_in_trash'  => 'Not found in trash'
 		); 
 		$args = array(
 			'label' => 'portfolio',
@@ -104,12 +104,12 @@ function portfolio_post_type() {
 
 		register_taxonomy( 'categories', array('portfolio'), array(
 			'hierarchical' => true, 
-			'label' => 'Kategorie', 
-			'singular_label' => 'Kategoria', 
+			'label' => 'Categories', 
+			'singular_label' => 'Category', 
 			'show_ui'           => true,
         	'show_admin_column' => true,
 			'query_var'         => true,
-			'rewrite' => array( 'slug' => 'portfolio-kategoria', )
+			'rewrite' => array( 'slug' => 'portfolio-category', )
 			)
 		);
 	
