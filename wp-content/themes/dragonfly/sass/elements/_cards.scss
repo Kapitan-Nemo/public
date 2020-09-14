@@ -1,0 +1,112 @@
+#posts-category {
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid #f1f4f8;
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+    }
+    a {
+        color: white;
+         text-decoration: none;
+    } 
+    #parent {
+        background-image: none!important;
+
+    }
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid #f1f4f8;
+    border-radius: .375rem;
+    transition: 0.3s ease;
+    min-height: 520px;
+}
+
+.card:hover {
+    transition: 0.3s ease;
+    transform: translateY(-2.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+}
+
+.card-meta-divider {
+    width: 100%;
+    margin: 0 0 1.5rem;
+}
+
+.card-meta {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 2rem 1.5rem;
+}
+
+.card-body, .card-footer, .card-img, .card-img-left, .card-img-right, .card-img-top, .card-meta {
+    position: relative;
+    min-height: 1px;
+}
+
+.card-body {
+    display: block;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 2rem;
+}
+
+.avatar {
+    position: relative;
+    display: inline-block;
+    width: 1.875rem;
+    height: 1.875rem;
+    font-size: .625rem;
+}
+
+.avatar-sm {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: .5rem;
+}
+
+.border-white-20 {
+    border-color: rgba(255,255,255,.2)!important;
+}
+
+.shadow-light-lg {
+    box-shadow: 0 1.5rem 4rem rgba(22,28,45,.05)!important;
+}
+
+.overlay-30::before {
+    opacity: .3;
+}
+.overlay-black::before {
+    background-color: #161c2d;
+}
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+}

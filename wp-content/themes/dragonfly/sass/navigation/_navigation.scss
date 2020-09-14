@@ -1,0 +1,138 @@
+header {
+    height:60px
+}
+nav {
+    .navbar {
+        transition: all 0.5s ease;
+    }
+    .container-fluid {
+        top: 10px;
+        position: fixed;
+    }
+    a {
+        color:white!important;
+        font-weight: 100;
+        letter-spacing: 0.5rem;
+        text-align: left;
+        transition: 0.3s ease;
+    }
+
+    a:hover {
+        letter-spacing: 2rem;
+        transition: 0.3s ease;
+      }    
+      
+      a:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: $gray;
+        transition: width 0.6s ease 0s, left 0.6s ease 0s;
+        width: 0;
+      }
+      a:hover:after { 
+        width: 100%; 
+        left: 0; 
+      } 
+}
+
+.nav-transition {
+    transition: all .65s ease-in-out;
+    -moz-transition: all .65s ease-in-out;
+    -webkit-transition: all .65s ;
+}
+
+.collapsing {
+    transition: none;
+}
+
+.navbar-dark {
+    transition: all 0.5s ease;
+    background: #000!important;
+    height:100%;
+    width:100%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    text-align: center;
+    padding: 0;
+}
+
+.nav-item {
+    font-size: 100px;
+    letter-spacing: 2.21px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-nav .nav-link:hover {
+    color: $gray!important;
+}
+
+.fixed-top .navbar-toggler {
+    position: absolute;
+    top:10px;
+    left:15px;
+}
+
+.fixed-top body {
+    overflow: hidden!important;
+}
+
+.navbar-toggler {
+    border: none;
+    background: 0 0!important;
+    padding: 0;
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+.icon-bar {
+    width: 60px;
+    height: 1px;
+    background-color: $gray;
+    display: block;
+    transition: all .2s;
+    margin-top: 15px;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2;
+    display: none;
+}
+
+@import "_buttons";
+@import "_footer";

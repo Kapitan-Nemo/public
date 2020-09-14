@@ -1,0 +1,37 @@
+/*!
+Theme Name: Dragonfly
+Author: Capitan_Nemo
+Description: Minimal custom wordpress portfolio theme using: Gulp / Sass / Bootstrap (ver 4.5.2) / Contact form 7 / Advance Custom Fields
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.3.5
+Text Domain: dragonfly
+Have fun, stay single.
+*/
+
+
+
+@import "bootstrap/bootstrap";
+@import "elements/elements";
+@import "typography/typography";
+@import "navigation/navigation";
+@import "media/media";
+
+body {
+   font-family: 'Montserrat', sans-serif;
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+:focus { 
+    outline: none !important; 
+}
+
+hr {
+    color:$gray;
+}

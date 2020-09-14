@@ -1,0 +1,33 @@
+.wpcf7-text, .wpcf7-textarea {
+    border: none;
+    border-bottom:solid #cacaca 1px;
+    margin-bottom:2.5rem;
+    padding-left: 0.6rem;
+    width:70%;
+}
+
+.wpcf7-not-valid-tip {
+    display:none;
+}
+
+.wpcf7-submit {
+    border: solid 1px; 
+    margin-bottom: 5rem;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+    border-color:#f5c6cb;
+    border: 1px solid transparent;
+    margin: -60px 0 75px;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+    border-color: #d4edda;
+    border: 1px solid transparent;
+    margin: -60px 0 75px;
+}
+
+.wpcf7-not-valid {
+    border-color:#f5c6cb;
+}
+

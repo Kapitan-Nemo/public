@@ -1,0 +1,66 @@
+#post-content {
+    figure {
+        max-width: 100%;
+        height: auto;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.img-text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width:575.98px) {
+    #galleryButtons button{
+        width:100%;
+        margin:0 0 10px!important;
+    }
+
+    #post-content {
+        .display-4 {
+            font-size: 1.9rem;
+        }
+    }
+
+    .wpcf7-text, .wpcf7-textarea {
+        width:100%;
+    }
+
+    .wpcf7-submit {
+        width:100%!important;
+    }
+    
+    .display-1 {
+        font-size: 3.0rem;
+    }
+
+    .display-2 {
+        font-size: 2.8rem;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .nav-link {
+        font-size: 2rem;
+    }
+    .vh-100 {
+        height: auto!important;
+    }
+    nav a:hover {
+        letter-spacing: 1.5rem;
+    }
+    .nav-link {
+        padding: 1rem 1rem;
+    }
+    .vh-101 {
+        height: auto !important;
+    }
+}
