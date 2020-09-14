@@ -17,9 +17,9 @@
             <?php endwhile; endif; ?>
         </div>
         <div class="col-md-6 col-12 order-1 order-md-2">
-            <p class="display-4 font-weight-lighter mt-3 mt-md-0">Informacje o projekcie:</p>
+            <p class="display-4 font-weight-lighter mt-3 mt-md-0">Info about project:</p>
             <div class="d-inline">
-            <span class="mr-1">Kategoria: </span>
+            <span class="mr-1">Category: </span>
             <?php
                 $terms = get_the_terms( $post->ID , 'categories' );
                 if ( $terms != null ){
@@ -27,7 +27,7 @@
                 $term_link = get_term_link( $term, 'categories' );
                 echo '<a class="badge badge-pill badge-dark" href="' . $term_link . '">' . $term->name . '</a>';
                 unset($term); } } ?>
-             <span class="ml-2 mr-1">Data:</span>
+             <span class="ml-2 mr-1">Date:</span>
                 <span class="badge badge-pill badge-dark"> <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></span>
              </div>
          

@@ -1,7 +1,7 @@
 <?php get_header();?>
 <div id="posts-category" class="container py-5"> 
     <div id="gallery" class="row mx-auto">
-        <p class="display-4 mb-5 mx-auto">Kategoria: 
+        <p class="display-4 mb-5 mx-auto">Category: 
             <?php
                 $terms = get_the_terms( $post->ID , 'categories' );
                 if ( $terms != null ) {
