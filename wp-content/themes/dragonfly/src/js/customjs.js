@@ -51,7 +51,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 	
 if (buttonsNumber >= 1) {
 	$('<button />', {
-		text: 'Wyświetl wszystko',
+		text: 'Show all',
 		class: 'active btn btn-outline-primary',
 			click: function() {
 				$(this)

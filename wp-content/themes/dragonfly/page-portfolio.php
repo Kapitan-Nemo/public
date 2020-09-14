@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Strona portfolio
+ * Template Name: Portfolio page
  * Template Post Type: page
 */
  ?>

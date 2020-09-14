@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Kontakt
+ * Template Name: Contact
  * Template Post Type: page
 */
  ?>
@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-6 order-2 order-md-1 col-12 text-center">
             <h2 class="display-4 font-weight-lighter mt-3 mt-md-0 mb-5">Skontaktuj się ze mną</h2>
-            <?php echo do_shortcode( '[contact-form-7 id="102" title="Formularz 1"]' ); ?>
+            <?php echo do_shortcode( '[contact-form-7 id="102" title="Contact form"]' ); ?>
         </div>
         
     </div>
