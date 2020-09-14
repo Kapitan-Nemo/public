@@ -1,2 +1,22 @@
 # Dragonfly
-Wordpress custom theme
+Main purpose of this project was to build clean and modern WordPress theme, and also got new decent job.
+
+Dragonfly theme use: 
+- Gulp
+- Sass
+- Bootstrap | ver 4.5.2
+- jQuery | ver 3.5.1
+- Advance Custom Fields | ver 5.9.1
+- Contact form 7 | ver 5.2.2
+
+Core functions:
+- Minification  .scss / .js / .png | .gif | .jpg files (from folders src => dist)
+
+Changes from functions.php:
+- Deregister standard WP jQuery and register new one
+- Enqueue scripts and styles
+- Custom Navigation Walker for Bootstrap
+- Filter excrept length to 35 words / Remove [...] from excerpt	
+- Custom Post Type / Custom taxonomy ( Separate categories for portfolio and posts )
+- Contact Form 7 remove <p> tags
+- Disable standard editor and Gutenberg for the homepage
