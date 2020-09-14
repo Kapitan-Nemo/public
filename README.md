@@ -26,7 +26,7 @@ Changes from functions.php:
 - Custom Navigation Walker for Bootstrap
 - Filter excrept length to 35 words / Remove [...] from excerpt
 - Custom Post Type / Custom taxonomy ( Separate categories for portfolio and posts )
-- Contact Form 7 remove <p> tags
+- Contact Form 7 remove p tags from form
 - Disable standard editor and Gutenberg for the homepage
 
 Testing on local development environment with:
