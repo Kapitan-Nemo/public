@@ -4,7 +4,17 @@
  * Template Post Type: page
 */
  ?>
-
+<?php
+if (is_page('contact')) { 
+    if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+        wpcf7_enqueue_scripts();
+    }
+  
+    if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+        wpcf7_enqueue_styles();
+    }
+}
+?>2
 <?php get_header();?>
 <div class="container-fluid">
     <div class="row">

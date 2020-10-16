@@ -12,7 +12,7 @@
                     } 
                 } 
             ?>
-        </h2>
+        </p>
 
         <?php 
             $terms = wp_get_post_terms( $post->ID, 'categories'); 

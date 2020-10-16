@@ -25,8 +25,8 @@ function dragonfly_scripts()
 {
     // Deregister standard wP jQuery and register new one
     wp_deregister_script('jquery');
-	wp_enqueue_script('jquery', get_template_directory_uri() . '/src/js/jquery-3.5.1.min.js', 'jquery', '', true);
-    wp_enqueue_script('dragonfly-js',get_template_directory_uri() . '/dist/js/dragonfly.js', 'jquery', '', true);
+	wp_enqueue_script('jquery', get_template_directory_uri() . '/src/js/jquery-3.5.1.min.js', 'jquery', '3.5.1', true);
+    wp_enqueue_script('dragonfly-js',get_template_directory_uri() . '/dist/js/dragonfly.js', 'jquery', '1.0.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'dragonfly_scripts');
 
@@ -120,7 +120,7 @@ function portfolio_post_type() {
 
 //Contact Form 7 
 add_filter('wpcf7_autop_or_not', '__return_false');  //Remove <p> tags
-
+add_filter( 'wpcf7_load_js', '__return_false' ); add_filter( 'wpcf7_load_css', '__return_false' );
 
 /**
  * Disable standard editor and Gutenberg for the homepage
@@ -134,4 +134,32 @@ function dragonfly_hide_editor( $use_block_editor, $post_type ) {
     }
 
     return $use_block_editor; // keep gutenberg status for other pages/posts 
+}
+
+/**
+ * Disable the emoji's
+ */
+function disable_emojis() {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	
+	// Remove from TinyMCE
+	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+}
+add_action( 'init', 'disable_emojis' );
+
+/**
+ * Filter out the tinymce emoji plugin.
+ */
+function disable_emojis_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
 }
