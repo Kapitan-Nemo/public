@@ -2,7 +2,7 @@
 <html lang="pl">
     <head>    
         <meta charset="utf-8">  
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">  
         <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /> 
@@ -12,7 +12,7 @@
 <body <?php body_class();?>>
 
 <header>
-    <nav class="navbar sticky-top" role="navigation">
+    <nav class="navbar sticky-top">
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar top-bar"></span>
                 <span class="icon-bar middle-bar"></span>

@@ -14,7 +14,7 @@ if (is_page('contact')) {
         wpcf7_enqueue_styles();
     }
 }
-?>2
+?>
 <?php get_header();?>
 <div class="container-fluid">
     <div class="row">
