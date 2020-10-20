@@ -1,8 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
 
-  .display-2 {
-    font-size: 5.2rem;
+
+@font-face {
+  font-family: Montserrat;
+  src: url(fonts/Montserrat-VF.woff2) format('woff2-variations');
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(fonts/Montserrat-Italic-VF.woff2) format('woff2-variations');
+  font-style: italic;
+  /*    ^ only has weight axis (200–900 range) */
+}
+
+@keyframes Looper {
+  from {
+      font-variation-settings: "wght" 900;
   }
+  to {
+      font-variation-settings: "wght" 100;
+  }
+}
+
+.display-2 {
+    font-size: 5.2rem;
+    font-variation-settings: "wght" 100;
+}
 
   .text-white-80 {
     color: rgba(255,255,255,.8)!important;
