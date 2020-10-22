@@ -23,7 +23,7 @@ add_action( 'after_setup_theme', 'dragonfly_support' );
 // Enqueue scripts
 function dragonfly_scripts()
 {
-    // Deregister standard wP jQuery and register new one
+    // Deregister standard WP jQuery and register new one
     wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', get_template_directory_uri() . '/src/js/jquery-3.5.1.min.js', 'jquery', '3.5.1', true);
     wp_enqueue_script('dragonfly-js',get_template_directory_uri() . '/dist/js/dragonfly.js', 'jquery', '1.0.0', true);
@@ -163,3 +163,16 @@ function disable_emojis_tinymce( $plugins ) {
 		return array();
 	}
 }
+
+
+//Remove Gutenberg CSS
+function dm_remove_wp_block_library_css(){
+	wp_dequeue_style( 'wp-block-library' );
+	}
+add_action( 'wp_enqueue_scripts', 'dm_remove_wp_block_library_css' );
+
+//Remove wp-embed JS
+function my_deregister_scripts(){
+	wp_deregister_script( 'wp-embed' );
+  }
+  add_action( 'wp_footer', 'my_deregister_scripts' );
