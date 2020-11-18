@@ -32,7 +32,7 @@
                 <div class="card mb-6 mb-lg-0 shadow-light-lg">
                 <?php if (has_post_thumbnail()):?>
                   <div class="img-overlay"></div>
-                  <img class="card-img" src="<?php the_post_thumbnail_url( 'full' ); ?>" />
+                  <img class="card-img img-responsive" src="<?php the_post_thumbnail_url( 'full' ); ?>" />
                 <?php endif; ?>
               <div class="card-body mt-auto">
                 <h3 class="text-white">

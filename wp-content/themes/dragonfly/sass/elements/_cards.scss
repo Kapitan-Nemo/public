@@ -50,7 +50,12 @@
         height: 100%;
         background-color:#161c2d;
         opacity: 0.4;
-        z-index:1;
+        z-index:1000;
+      }
+
+      .text-white {
+          position: relative;
+          z-index: 1001;
       }
 }
 
@@ -72,6 +77,7 @@
     -webkit-box-align: center;
     align-items: center;
     padding: 0 2rem 1.5rem;
+    z-index: 1000;
 }
 
 .card-body, .card-footer, .card-img, .card-img-left, .card-img-right, .card-img-top, .card-meta {

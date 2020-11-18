@@ -58,13 +58,13 @@ if (buttonsNumber >= 1) {
 					.addClass('active')
 					.siblings()
 					.removeClass('active');
-				$parent.show(500);
+				$parent.hide().fadeIn();
 			}
 		}).appendTo($buttons);
 	}
 	$.each(taggedParent,  function(tagNameParent) {
 		$('<button/>', {
-			text: tagNameParent + ' (' + taggedParent[tagNameParent].length + ')',
+			text: tagNameParent,
 			class: 'btn btn-outline-primary ml-3',
 			click: function() {
 				$(this)
@@ -72,9 +72,9 @@ if (buttonsNumber >= 1) {
 					.siblings()
 					.removeClass('active');
 				$parent
-					.hide(500)
+					.hide()
 					.filter(taggedParent[tagNameParent])
-					.show(500);
+					.fadeIn();
 			}
 		}).appendTo($buttons);
 	})
