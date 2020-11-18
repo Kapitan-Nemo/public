@@ -20,6 +20,7 @@
 
 .card {
     position: relative;
+    width: 100%;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -33,6 +34,24 @@
     border-radius: .375rem;
     transition: 0.3s ease;
     min-height: 520px;
+
+    .card-img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:#161c2d;
+        opacity: 0.4;
+        z-index:1;
+      }
 }
 
 .card:hover {
@@ -95,18 +114,3 @@
     box-shadow: 0 1.5rem 4rem rgba(22,28,45,.05)!important;
 }
 
-.overlay-30::before {
-    opacity: .3;
-}
-.overlay-black::before {
-    background-color: #161c2d;
-}
-.overlay::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: inherit;
-}

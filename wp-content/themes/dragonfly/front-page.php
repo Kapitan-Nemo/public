@@ -28,11 +28,7 @@
         ?>   
       </div>
       <div class="col-md-6 order-1 order-md-2 col-12 p-0 pr-md-0">
-
-      <img class="img-fluid vh-101 w-100 mt-n6" <?php awesome_acf_responsive_image(get_field( 'main_image' ),'thumb-1000','1000px'); ?>  alt="text" />
-
-         
-
+        <img class="img-fluid vh-101 w-100 mt-n6" <?php awesome_acf_responsive_image(get_field( 'main_image' ),'thumb-1000','1000px'); ?>  alt="text" />
       </div>
     </div>
   </div>

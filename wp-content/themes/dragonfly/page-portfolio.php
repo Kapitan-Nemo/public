@@ -27,11 +27,13 @@
           while ($arr_posts->have_posts()) : $arr_posts->the_post()
       ?>
 
-        <div id="parent" style="background-image: url( <?php the_post_thumbnail_url( 'full' ); ?>);" data-tags="<?php $term_obj_list = get_the_terms( $post->ID, 'categories' ); $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));  echo $terms_string; ?>" class="col-12 col-md-6 col-lg-4">
+        <div id="parent" data-tags="<?php $term_obj_list = get_the_terms( $post->ID, 'categories' ); $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));  echo $terms_string; ?>" class="col-12 col-md-6 col-lg-4">
           <a href="<?php the_permalink() ?>" >
-            <?php if (has_post_thumbnail()):?>
-              <div style="background-image: url( <?php the_post_thumbnail_url( 'full' ); ?>);" class="card mb-6 mb-lg-0 pt-14 overlay overlay-black overlay-30 bg-cover shadow-light-lg">
-              <?php endif; ?>
+                <div class="card mb-6 mb-lg-0 shadow-light-lg">
+                <?php if (has_post_thumbnail()):?>
+                  <div class="img-overlay"></div>
+                  <img class="card-img" src="<?php the_post_thumbnail_url( 'full' ); ?>" />
+                <?php endif; ?>
               <div class="card-body mt-auto">
                 <h3 class="text-white">
                   <?php the_title(); ?>

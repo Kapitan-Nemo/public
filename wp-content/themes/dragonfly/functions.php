@@ -26,7 +26,7 @@ function dragonfly_scripts()
     // Deregister standard WP jQuery and register new one
     wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', get_template_directory_uri() . '/src/js/jquery-3.5.1.min.js', 'jquery', '3.5.1', true);
-    wp_enqueue_script('dragonfly-js',get_template_directory_uri() . '/dist/js/dragonfly.js', 'jquery', '1.0.0', true);
+    wp_enqueue_script('dragonfly-js',get_template_directory_uri() . '/dist/js/dragonfly.js', 'jquery', '1.0.1', true);
 }
 add_action( 'wp_enqueue_scripts', 'dragonfly_scripts');
 
@@ -193,22 +193,12 @@ add_image_size( '1600', 1600 );
 add_image_size( '1800', 1800 );
 add_image_size( '1920', 1920 );
 
-function remove_max_srcset_image_width( $max_width ) {
-    return false;
-}
-add_filter( 'max_srcset_image_width', 'remove_max_srcset_image_width' );
-
-
-
 add_filter( 'max_srcset_image_width', 'awesome_acf_max_srcset_image_width', 10 , 2 );
 
 // set the max image width 
 function awesome_acf_max_srcset_image_width() {
 	return 2200;
 }
-
-		
-
 
 /**
  * Responsive Image Helper Function
