@@ -34,8 +34,8 @@
                   <div class="img-overlay"></div>
                   <img class="card-img img-responsive" src="<?php the_post_thumbnail_url( 'full' ); ?>" />
                 <?php endif; ?>
-              <div class="card-body mt-auto">
-                <h3 class="text-white">
+              <div class="card-body">
+                <h3 class="text-white mb-3">
                   <?php the_title(); ?>
                 </h3>
                 <p class="mb-0 text-white">

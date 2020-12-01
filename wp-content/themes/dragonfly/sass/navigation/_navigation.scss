@@ -78,7 +78,7 @@ nav {
 .fixed-top .navbar-toggler {
     position: absolute;
     top:10px;
-    left:15px;
+    right:15px;
 }
 
 .fixed-top body {
@@ -118,8 +118,8 @@ nav {
 }
 
 .icon-bar {
-    width: 60px;
-    height: 1px;
+    width: 25px;
+    height: 3px;
     background-color: $gray;
     display: block;
     transition: all .2s;
@@ -132,6 +132,11 @@ nav {
     right: 15px;
     z-index: 2;
     display: none;
+}
+
+.sticky-top {   
+    position: absolute;
+    right: 0;
 }
 
 @import "_buttons";

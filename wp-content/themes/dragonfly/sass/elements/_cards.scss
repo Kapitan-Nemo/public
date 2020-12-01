@@ -14,7 +14,6 @@
     } 
     #parent {
         background-image: none!important;
-
     }
 }
 
@@ -40,6 +39,7 @@
         height: 100%;
         width: 100%;
         position: absolute;
+        border-radius: 1%;
     }
     
     .img-overlay {
@@ -51,6 +51,7 @@
         background-color:#161c2d;
         opacity: 0.4;
         z-index:1000;
+        border-radius: 1%;
       }
 
       .text-white {

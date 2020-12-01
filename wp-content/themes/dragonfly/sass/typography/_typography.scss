@@ -4,11 +4,13 @@
   font-family: Montserrat;
   src: url(fonts/Montserrat-VF.woff2) format('woff2-variations');
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: Montserrat;
   src: url(fonts/Montserrat-Italic-VF.woff2) format('woff2-variations');
   font-style: italic;
+  font-display: swap;
   /*    ^ only has weight axis (200–900 range) */
 }
 
@@ -21,10 +23,19 @@
   }
 }
 
+
+.font-weight-lighter {
+  font-variation-settings: "wght" 100;
+}
+
+font-weight-bold {
+  font-variation-settings: "wght" 900;
+}
+
 .display-2 {
     font-size: 5.2rem;
-    font-variation-settings: "wght" 100;
 }
+
 
   .text-white-80 {
     color: rgba(255,255,255,.8)!important;
