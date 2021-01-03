@@ -32,13 +32,13 @@ add_action( 'wp_enqueue_scripts', 'dragonfly_scripts');
 
 
 // Inculude styles
-function load_stylesheets()
+function dragonfly_stylesheets()
 {
 wp_register_style('dragonfly-style-min', get_template_directory_uri() . '/style.css' , array(), false, 'all' );
 wp_enqueue_style('dragonfly-style-min');
 
 }
-add_action('wp_enqueue_scripts','load_stylesheets');
+add_action('wp_enqueue_scripts','dragonfly_stylesheets');
 
 
 // Register Custom Navigation Walker for bootstrap
