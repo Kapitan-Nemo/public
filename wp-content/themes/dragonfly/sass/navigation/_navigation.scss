@@ -1,6 +1,3 @@
-header {
-    height:60px
-}
 nav {
     .navbar {
         transition: all 0.5s ease;
@@ -55,6 +52,10 @@ nav {
     background: #000!important;
     height:100%;
     width:100%;
+}
+
+.navbar-dark .icon-bar {
+    background-color: #fff;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -118,12 +119,12 @@ nav {
 }
 
 .icon-bar {
-    width: 25px;
-    height: 3px;
-    background-color: $gray;
+    width: 45px;
+    height: 2px;
+    background-color: $black;
     display: block;
     transition: all .2s;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .scroll-top {
@@ -136,7 +137,7 @@ nav {
 
 .sticky-top {   
     position: absolute;
-    right: 0;
+    right: 5px;
 }
 
 @import "_buttons";

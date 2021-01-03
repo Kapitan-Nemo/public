@@ -23,9 +23,29 @@
   }
 }
 
+.font-weight-100 {
+  font-variation-settings: "wght" 100;
+}
+
+.font-weight-200 {
+  font-variation-settings: "wght" 200;
+}
+
+.font-weight-300 {
+  font-variation-settings: "wght" 300;
+}
+
+.font-weight-400 {
+  font-variation-settings: "wght" 400;
+}
+
 
 .font-weight-lighter {
   font-variation-settings: "wght" 100;
+}
+
+.font-weight-light {
+  font-variation-settings: "wght" 300;
 }
 
 font-weight-bold {
@@ -36,8 +56,7 @@ font-weight-bold {
     font-size: 5.2rem;
 }
 
-
-  .text-white-80 {
+.text-white-80 {
     color: rgba(255,255,255,.8)!important;
 }
 

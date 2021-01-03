@@ -9,8 +9,6 @@
         <?php wp_head();?> 
     </head>
 
-<body <?php body_class();?>>
-
 <header>
     <nav class="navbar sticky-top">
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,3 +31,6 @@
 
     </nav>
 </header>
+
+<body <?php body_class();?>>
+
