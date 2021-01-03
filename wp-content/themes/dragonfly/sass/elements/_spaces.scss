@@ -8,7 +8,11 @@ body.admin-bar {
 
 body.admin-bar .fixed-top .navbar-toggler {
     top: 40px;
-    left: 15px;
+    right: 5px;
+}
+
+body.admin-bar .sticky-top {
+    top: 25px;
 }
 
 .mt-6 {
