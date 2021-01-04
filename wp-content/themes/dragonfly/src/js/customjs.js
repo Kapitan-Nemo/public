@@ -30,7 +30,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 
 //Filtering Gallery
 (function() {
-	var $parent = $('#gallery #parent');
+	var $parent = $('#gallery .parent');
 	var $buttons = $('#galleryButtons');
 	var buttonsNumber = $parent.length;
 	var taggedParent = {};

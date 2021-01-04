@@ -27,7 +27,7 @@
           while ($arr_posts->have_posts()) : $arr_posts->the_post()
       ?>
 
-        <div id="parent" data-tags="<?php $term_obj_list = get_the_terms( $post->ID, 'categories' ); $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));  echo $terms_string; ?>" class="col-12 col-md-6 col-lg-4">
+        <div data-tags="<?php $term_obj_list = get_the_terms( $post->ID, 'categories' ); $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));  echo $terms_string; ?>" class="col-12 col-md-6 col-lg-4 parent">
           <a href="<?php the_permalink() ?>" >
                 <div class="card mb-6 mb-lg-0 shadow-light-lg">
                 <?php if (has_post_thumbnail()):?>
