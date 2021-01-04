@@ -8,7 +8,7 @@
 <?php get_header();?>
 
 <div id="posts-category" class="container py-5"> 
-  <div class="row mb-5">
+  <div class="row mb-5 mt-5 mt-md-5">
     <div class="col-12 d-flex justify-content-center">
       <div id="galleryButtons"></div>
     </div>
@@ -32,7 +32,8 @@
                 <div class="card mb-6 mb-lg-0 shadow-light-lg">
                 <?php if (has_post_thumbnail()):?>
                   <div class="img-overlay"></div>
-                  <img class="card-img img-responsive" src="<?php the_post_thumbnail_url( 'full' ); ?>" />
+                 
+                  <?php the_post_thumbnail(array(700,700, 'class' => ' card-img img-responsive"')); ?>
                 <?php endif; ?>
               <div class="card-body">
                 <h3 class="text-white mb-3">
