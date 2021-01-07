@@ -1,8 +1,17 @@
 <?php get_header();?>
 <div id="posts-category" class="container py-5"> 
     <div id="gallery" class="row">
-        
-
+        <?php
+            $terms = get_the_terms( $post->ID , 'categories' );
+            if ( $terms != null ) {
+                foreach( $terms as $term ) {
+                    $term_link = get_term_link( $term, 'categories' );
+                    echo '<p class="display-4 mb-5 col-12 text-center font-weight-200">Category: ' . $term->name . '</p>';
+                    unset($term); 
+                } 
+            } 
+        ?>
+ 
         <?php 
             $terms = wp_get_post_terms( $post->ID, 'categories'); 
             $terms_ids = [];
@@ -27,18 +36,7 @@
             while ($query->have_posts()) : $query->the_post() 
         ?>
 
-        <p class="display-4 mb-5 col-12 text-center font-weight-200">Category: 
-            <?php
-                $terms = get_the_terms( $post->ID , 'categories' );
-                if ( $terms != null ) {
-                    foreach( $terms as $term ) {
-                        $term_link = get_term_link( $term, 'categories' );
-                        echo $term->name;
-                        unset($term); 
-                    } 
-                } 
-            ?>
-        </p>
+        
 
        <div class="col-12 col-md-6 col-lg-4 parent">
           <a href="<?php the_permalink() ?>" >
