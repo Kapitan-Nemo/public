@@ -9,7 +9,7 @@ wp-content/*
 !wp-content/uploads/
 
 # ignore these plugins
-wp-content/plugins/hello.php
+wp-content/plugins/all-in-one-wp-migration*/
 
 
 # ignore specific themes
