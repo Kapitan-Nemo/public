@@ -1,7 +1,7 @@
 <?php get_header();?>
 <div id="posts-category" class="container py-5"> 
-    <div id="gallery" class="row mx-auto">
-        <p class="display-4 mb-5 mx-auto">Category: 
+    <div id="gallery" class="row">
+        <p class="display-4 mb-5 col-12 text-center font-weight-200">Category: 
             <?php
                 $terms = get_the_terms( $post->ID , 'categories' );
                 if ( $terms != null ) {
@@ -38,12 +38,15 @@
             while ($query->have_posts()) : $query->the_post() 
         ?>
 
-        <a href="<?php the_permalink() ?>" >
-            <?php if (has_post_thumbnail()):?>
-              <div style="background-image: url( <?php the_post_thumbnail_url('large'); ?>);" class="card mb-6 mb-lg-0 pt-14 overlay overlay-black overlay-30 bg-cover shadow-light-lg">
-            <?php endif; ?>
-              <div class="card-body mt-auto">
-                <h3 class="text-white">
+       <div class="col-12 col-md-6 col-lg-4 parent">
+          <a href="<?php the_permalink() ?>" >
+                <div class="card mb-6 mb-lg-0 shadow-light-lg">
+                <?php if (has_post_thumbnail()):?>
+                  <div class="img-overlay"></div>
+                  <?php echo get_the_post_thumbnail( $post_id, array( 350, 520), array( 'class' => 'card-img img-responsive' ) ); ?>
+                <?php endif; ?>
+              <div class="card-body">
+                <h3 class="text-white mb-3">
                   <?php the_title(); ?>
                 </h3>
                 <p class="mb-0 text-white">
@@ -63,7 +66,9 @@
                 </p>
               </div>
             </div>
-        </a>
+            </a>
+        </div>
+
         <?php endwhile ?>
         <?php else :?>
           <div class="col-12 text-center">

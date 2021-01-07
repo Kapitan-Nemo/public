@@ -179,19 +179,10 @@ function my_deregister_scripts(){
 
 
 //Images sizes
-add_image_size( '200', 200 );
-add_image_size( '300', 300 );
-add_image_size( '400', 400 );
-add_image_size( '500', 500 );
-add_image_size( '600', 600 );
-add_image_size( '700', 700 );
-add_image_size( '800', 800 );
-add_image_size( '1000', 1000 );
-add_image_size( '1200', 1200 );
-add_image_size( '1400', 1400 );
-add_image_size( '1600', 1600 );
-add_image_size( '1800', 1800 );
-add_image_size( '1920', 1920 );
+add_image_size('single portfolio', 700, 500);
+
+//Remove making scaled file of media
+add_filter( 'big_image_size_threshold', '__return_false' );
 
 add_filter( 'max_srcset_image_width', 'awesome_acf_max_srcset_image_width', 10 , 2 );
 

@@ -11,7 +11,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 order-1 order-md-2 col-12 p-0">
-        <img class="img-fluid vh-100 w-100" <?php awesome_acf_responsive_image(get_field( 'main_image' ),'thumb-1000','1000px'); ?>  alt="" /> 
+        <img class="img-fluid vh-100 w-100" <?php awesome_acf_responsive_image(get_field( 'main_image' ),'thumb-1000','1000px'); ?>  alt="Xirnaul" /> 
       </div>
       <div class="col-md-6 order-2 order-md-1 col-12 p-0 my-auto">
         <?php $mainTitle = get_field( "main_title" );

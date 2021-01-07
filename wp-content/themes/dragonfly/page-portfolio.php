@@ -32,8 +32,7 @@
                 <div class="card mb-6 mb-lg-0 shadow-light-lg">
                 <?php if (has_post_thumbnail()):?>
                   <div class="img-overlay"></div>
-                 
-                  <?php the_post_thumbnail(array(700,700, 'class' => ' card-img img-responsive"')); ?>
+                  <?php echo get_the_post_thumbnail( $post_id, array( 350, 520), array( 'class' => 'card-img img-responsive' ) ); ?>
                 <?php endif; ?>
               <div class="card-body">
                 <h3 class="text-white mb-3">

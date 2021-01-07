@@ -23,13 +23,13 @@
                     echo '<a class="badge badge-pill badge-dark px-3 py-2" href="' . $term_link . '">' . $term->name . '</a>';
                     unset($term); } } ?>
                 <span class="ml-2 mr-1">Date:</span>
-                    <span class="badge badge-pill badge-dark px-3 py-2"> <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></span>
+                    <span class="badge badge-pill badge-dark px-3 py-2"><time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></span>
                 </div>
                 <?php the_content();?>
             <?php endwhile; endif; ?>
         </div>
         <div class="col-md-6 col-12 order-1 order-md-2 p-0 p-md-3">
-            <?php echo get_the_post_thumbnail( $post_id, array( 700, 500), array( 'class' => 'img-fluid rounded' ) ); ?>
+            <?php echo get_the_post_thumbnail( $post_id, array( 680, 454), array( 'class' => 'img-fluid rounded' ) ); ?>
         </div>
     </div>
 </div>
