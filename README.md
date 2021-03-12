@@ -38,7 +38,6 @@ Testing on local development environment with:
  
  Settings & Info: 
  - Domain name | portfolio.local
- - MySQL file inside folder Database (need to import!)
  - WP Login Name | Silent
  - WP Password | Anathema
  - Folder dev-gulp is without node_modules! (need to download!)
